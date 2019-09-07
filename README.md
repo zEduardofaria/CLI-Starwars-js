@@ -30,21 +30,24 @@ USAGE
 <!-- commands -->
 * [`starwars hello`](#starwars-hello)
 * [`starwars help [COMMAND]`](#starwars-help-command)
+* [`starwars vehicle`](#starwars-vehicle)
 
 ## `starwars hello`
 
-Describe the command here
+Say hello for someone, or for everyone!
 
 ```
 USAGE
   $ starwars hello
 
 OPTIONS
-  -n, --name=name  name to print
+  -n, --name=name  Name to say hello
 
 DESCRIPTION
-  ...
-  Extra documentation goes here
+  If you want to say hello for someone, try something like this two examples:
+
+  $ starwars hello -n=Eduardo
+  $ starwars hello --name=Eduardo
 ```
 
 _See code: [src/commands/hello.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/hello.js)_
@@ -65,4 +68,22 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
+
+## `starwars vehicle`
+
+Describe the command here
+
+```
+USAGE
+  $ starwars vehicle
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/vehicle.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/vehicle.js)_
 <!-- commandsstop -->
