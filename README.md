@@ -32,6 +32,7 @@ USAGE
 * [`starwars hello`](#starwars-hello)
 * [`starwars help [COMMAND]`](#starwars-help-command)
 * [`starwars people`](#starwars-people)
+* [`starwars pilot`](#starwars-pilot)
 * [`starwars planet`](#starwars-planet)
 * [`starwars specie`](#starwars-specie)
 * [`starwars starship`](#starwars-starship)
@@ -39,7 +40,7 @@ USAGE
 
 ## `starwars film`
 
-Get films information
+Get Films information
 
 ```
 USAGE
@@ -57,7 +58,12 @@ OPTIONS
 
 DESCRIPTION
   ...
-  Extra documentation goes here
+  You can search for all Films in the API, or search for a single one by the ID
+
+EXAMPLES
+  $ starwars film
+  $ starwars film --id="1"
+  $ starwars --filter="title=New"
 ```
 
 _See code: [src/commands/film.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/film.js)_
@@ -71,14 +77,7 @@ USAGE
   $ starwars hello
 
 OPTIONS
-  -x, --extended     show extra columns
-  --columns=columns  only show provided columns (comma-separated)
-  --csv              output is csv format
-  --filter=filter    filter property by partial string matching, ex: name=foo
-  --id=id            Search for an ID
-  --no-header        hide table header from output
-  --no-truncate      do not truncate output to fit screen
-  --sort=sort        property to sort by (prepend '-' for descending)
+  -n, --name=name  Name to say hello
 
 DESCRIPTION
   If you want to say hello for someone, try something like this two examples:
@@ -91,7 +90,7 @@ _See code: [src/commands/hello.js](https://github.com/CLI-Starwars-js/starwars/b
 
 ## `starwars help [COMMAND]`
 
-Display help for starwars CLI
+display help for starwars
 
 ```
 USAGE
@@ -108,7 +107,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1
 
 ## `starwars people`
 
-Get people information
+Get People information
 
 ```
 USAGE
@@ -126,14 +125,37 @@ OPTIONS
 
 DESCRIPTION
   ...
-  Extra documentation goes here
+  You can search for all People in the API, or search for a single one by the ID
+
+EXAMPLES
+  $ starwars people
+  $ starwars people --id="4"
+  $ starwars --filter="name=Luke"
 ```
 
 _See code: [src/commands/people.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/people.js)_
 
+## `starwars pilot`
+
+Describe the command here
+
+```
+USAGE
+  $ starwars pilot
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/pilot.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/pilot.js)_
+
 ## `starwars planet`
 
-Get planets information
+Get Planets information
 
 ```
 USAGE
@@ -151,14 +173,19 @@ OPTIONS
 
 DESCRIPTION
   ...
-  Extra documentation goes here
+  You can search for all Planets in the API, or search for a single one by the ID
+
+EXAMPLES
+  $ starwars planet
+  $ starwars planet --id="1"
+  $ starwars --filter="name=Sand"
 ```
 
 _See code: [src/commands/planet.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/planet.js)_
 
 ## `starwars specie`
 
-Get species information
+Get Species information
 
 ```
 USAGE
@@ -176,14 +203,19 @@ OPTIONS
 
 DESCRIPTION
   ...
-  Extra documentation goes here
+  You can search for all Species in the API, or search for a single one by the ID
+
+EXAMPLES
+  $ starwars specie
+  $ starwars specie --id="3"
+  $ starwars --filter="name=Wookie"
 ```
 
 _See code: [src/commands/specie.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/specie.js)_
 
 ## `starwars starship`
 
-Get starships information
+Get Starships information
 
 ```
 USAGE
@@ -201,7 +233,12 @@ OPTIONS
 
 DESCRIPTION
   ...
-  Extra documentation goes here
+  You can search for all Starships in the API, or search for a single one by the ID
+
+EXAMPLES
+  $ starwars starship
+  $ starwars starship --id="9"
+  $ starwars --filter="name=Death"
 ```
 
 _See code: [src/commands/starship.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/starship.js)_

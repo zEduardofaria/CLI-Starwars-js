@@ -37,7 +37,7 @@ const columns = {
       extended: true
     },
     vehicles: {
-      extended: true
+      minWidth: 7,
     },
     films: {
       minWidth: 7,

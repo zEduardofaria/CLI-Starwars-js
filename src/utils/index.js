@@ -18,7 +18,7 @@ const getById = async (url, model, id) => {
   })
 }
 
-const getAll = async (url, model) => {
+const getAllWithPagination = async (url, model) => {
   let data = null
   , command = true
   , next = `http://swapi.co/api/${url}`
@@ -48,4 +48,17 @@ const getAll = async (url, model) => {
   }
 }
 
-module.exports = { getAxios, getById, getAll }
+const getAll = async (url) => {
+  let next = `http://swapi.co/api/${url}`
+  , results = []
+
+  while (next) {  
+    data = await getAxios(next)
+    results = results.concat(data['results'])
+    next = data.next
+  }
+
+  return results
+}
+
+module.exports = { getAxios, getById, getAllWithPagination, getAll }

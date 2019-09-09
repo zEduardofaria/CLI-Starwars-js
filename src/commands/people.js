@@ -1,7 +1,7 @@
 const {Command, flags} = require('@oclif/command')
 const { cli } = require('cli-ux')
 
-const { getById, getAll } = require('../utils')
+const { getById, getAllWithPagination } = require('../utils')
 const People = require('../models/People')
 
 class PeopleCommand extends Command {
@@ -13,7 +13,7 @@ class PeopleCommand extends Command {
       return getById('people', People, id)
     }
     
-    return getAll('people', People)
+    return getAllWithPagination('people', People)
   }
 }
 
