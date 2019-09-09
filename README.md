@@ -15,7 +15,7 @@ This is a cool CLI for Smarttbot
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g starwars
+$ npm install
 $ starwars COMMAND
 running command...
 $ starwars (-v|--version|version)
