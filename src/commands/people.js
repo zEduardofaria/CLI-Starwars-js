@@ -2,16 +2,16 @@ const {Command, flags} = require('@oclif/command')
 const { cli } = require('cli-ux')
 
 const { getAxios } = require('../utils')
-const Vehicles = require('../models/Vehicles')
+const People = require('../models/People')
 
-class VehicleCommand extends Command {
+class PeopleCommand extends Command {
   async run() {
-    const { flags } = this.parse(VehicleCommand)
+    const { flags } = this.parse(PeopleCommand)
     , id = flags.id
 
     let data = null
     , command = true
-    , next = 'http://swapi.co/api/vehicles'
+    , next = 'http://swapi.co/api/people'
     , results = []
 
     if (id) {
@@ -19,7 +19,7 @@ class VehicleCommand extends Command {
       data = await getAxios(next + `/${id}`)
       cli.action.stop('Done') 
 
-      cli.table([data], Vehicles, {
+      cli.table([data], People, {
         printLine: this.log,
         ...flags
       })
@@ -37,7 +37,7 @@ class VehicleCommand extends Command {
 
       cli.action.stop('Done') 
       
-      cli.table(results, Vehicles, {
+      cli.table(results, People, {
         printLine: this.log,
         ...flags
       })
@@ -53,20 +53,20 @@ class VehicleCommand extends Command {
   }
 }
 
-VehicleCommand.description = `Get vehicles information
+PeopleCommand.description = `Get People information
 ...
-You can search for all vehicles in the API, or search for a single one by the ID
+You can search for all People in the API, or search for a single one by the ID
 `
 
-VehicleCommand.flags = {
+PeopleCommand.flags = {
   id: flags.string({ description: 'Search for an ID' }),
   ...cli.table.flags()
 }
 
-VehicleCommand.examples = [
-  '$ starwars vehicle',
-  '$ starwars vehicle --id="4"',
-  '$ starwars --filter="name=Sand"'
+PeopleCommand.examples = [
+  '$ starwars people',
+  '$ starwars people --id="4"',
+  '$ starwars --filter="name=Luke"'
 ]
 
-module.exports = VehicleCommand
+module.exports = PeopleCommand

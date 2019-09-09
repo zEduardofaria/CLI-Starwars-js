@@ -28,9 +28,32 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`starwars film`](#starwars-film)
 * [`starwars hello`](#starwars-hello)
 * [`starwars help [COMMAND]`](#starwars-help-command)
+* [`starwars people`](#starwars-people)
+* [`starwars planet`](#starwars-planet)
+* [`starwars specie`](#starwars-specie)
+* [`starwars starship`](#starwars-starship)
 * [`starwars vehicle`](#starwars-vehicle)
+
+## `starwars film`
+
+Describe the command here
+
+```
+USAGE
+  $ starwars film
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/film.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/film.js)_
 
 ## `starwars hello`
 
@@ -54,7 +77,7 @@ _See code: [src/commands/hello.js](https://github.com/CLI-Starwars-js/starwars/b
 
 ## `starwars help [COMMAND]`
 
-Display help for starwars
+display help for starwars
 
 ```
 USAGE
@@ -69,13 +92,13 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
 
-## `starwars vehicle`
+## `starwars people`
 
 Describe the command here
 
 ```
 USAGE
-  $ starwars vehicle
+  $ starwars people
 
 OPTIONS
   -n, --name=name  name to print
@@ -83,6 +106,90 @@ OPTIONS
 DESCRIPTION
   ...
   Extra documentation goes here
+```
+
+_See code: [src/commands/people.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/people.js)_
+
+## `starwars planet`
+
+Describe the command here
+
+```
+USAGE
+  $ starwars planet
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/planet.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/planet.js)_
+
+## `starwars specie`
+
+Describe the command here
+
+```
+USAGE
+  $ starwars specie
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/specie.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/specie.js)_
+
+## `starwars starship`
+
+Describe the command here
+
+```
+USAGE
+  $ starwars starship
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/starship.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/starship.js)_
+
+## `starwars vehicle`
+
+Get vehicles information
+
+```
+USAGE
+  $ starwars vehicle
+
+OPTIONS
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --id=id            Search for an ID
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
+
+DESCRIPTION
+  ...
+  You can search for all vehicles in the API, or search for a single one by the ID
+
+EXAMPLES
+  $ starwars vehicle
+  $ starwars vehicle --id="4"
+  $ starwars --filter="name=Sand"
 ```
 
 _See code: [src/commands/vehicle.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/vehicle.js)_
