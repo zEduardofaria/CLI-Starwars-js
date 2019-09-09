@@ -1,38 +1,73 @@
 const {Command, flags} = require('@oclif/command')
+const { cli } = require('cli-ux')
+
+const { getAxios } = require('../utils')
+const Vehicles = require('../models/Vehicles')
 
 class VehicleCommand extends Command {
   async run() {
-    const {flags} = this.parse(VehicleCommand)
-    , name = flags.name
+    const { flags } = this.parse(VehicleCommand)
     , id = flags.id
 
-    this.log(`Vehicle ${name} ${id}`)
+    let data = null
+    , command = true
+    , next = 'http://swapi.co/api/vehicles'
+    , results = []
 
-    if (name) {
-      swapiModule.getPeople({search: name}, function(data) {
-        this.log(`All results that match ${name}`, data);
-        })
-    } else if (id) {
-      swapiModule.getVehicle(id, function(data) {
-        this.log(`Result of getVehicle/${id}`, data);
-      });
-    } else {
-      swapiModule.getVehicles(function(data) {
-        this.log("Result of getVehicles", data);
-      });
+    if (id) {
+      cli.action.start('Loading...')
+      data = await getAxios(next + `/${id}`)
+      cli.action.stop('Done') 
+
+      cli.table([data], Vehicles, {
+        printLine: this.log,
+        ...flags
+      })
+
+      return 
     }
+    
+
+    while (next && command) {
+      cli.action.start('Loading...')
+
+      data = await getAxios(next)
+      results = data['results']
+      next = data.next
+
+      cli.action.stop('Done') 
+      
+      cli.table(results, Vehicles, {
+        printLine: this.log,
+        ...flags
+      })
+
+      if (next && results.length >= 10)
+        command = await cli.confirm('Next page? (y/n)')
+        else 
+        next = null
+        
+      if (!command)
+        command = false
+    }
+    // }
   }
 }
 
-VehicleCommand.description = `Describe the command here
+VehicleCommand.description = `Get vehicles information
 ...
-Extra documentation goes here
+You can search for all vehicles in the API, or search for a single one by the ID
 `
 
 VehicleCommand.flags = {
-  name: flags.string({char: 'n', description: 'name to print'}),
+  id: flags.string({ description: 'Search for an ID' }),
+  ...cli.table.flags()
 }
 
-module.exports = VehicleCommand
+VehicleCommand.examples = [
+  '$ starwars vehicle',
+  '$ starwars vehicle --id="4"',
+  '$ starwars --filter="name=Sand"'
+]
 
-const { swapiModule } = require('swapi-wrapper')
+module.exports = VehicleCommand

@@ -54,7 +54,7 @@ _See code: [src/commands/hello.js](https://github.com/CLI-Starwars-js/starwars/b
 
 ## `starwars help [COMMAND]`
 
-display help for starwars
+Display help for starwars
 
 ```
 USAGE

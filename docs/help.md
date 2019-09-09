@@ -1,13 +1,13 @@
 `starwars help`
 ===============
 
-display help for starwars
+Display help for starwars
 
 * [`starwars help [COMMAND]`](#starwars-help-command)
 
 ## `starwars help [COMMAND]`
 
-display help for starwars
+Display help for starwars
 
 ```
 USAGE
