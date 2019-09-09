@@ -39,14 +39,21 @@ USAGE
 
 ## `starwars film`
 
-Describe the command here
+Get films information
 
 ```
 USAGE
   $ starwars film
 
 OPTIONS
-  -n, --name=name  name to print
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --id=id            Search for an ID
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
 
 DESCRIPTION
   ...
@@ -64,7 +71,14 @@ USAGE
   $ starwars hello
 
 OPTIONS
-  -n, --name=name  Name to say hello
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --id=id            Search for an ID
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
 
 DESCRIPTION
   If you want to say hello for someone, try something like this two examples:
@@ -77,7 +91,7 @@ _See code: [src/commands/hello.js](https://github.com/CLI-Starwars-js/starwars/b
 
 ## `starwars help [COMMAND]`
 
-display help for starwars
+Display help for starwars CLI
 
 ```
 USAGE
@@ -94,14 +108,21 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1
 
 ## `starwars people`
 
-Describe the command here
+Get people information
 
 ```
 USAGE
   $ starwars people
 
 OPTIONS
-  -n, --name=name  name to print
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --id=id            Search for an ID
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
 
 DESCRIPTION
   ...
@@ -112,14 +133,21 @@ _See code: [src/commands/people.js](https://github.com/CLI-Starwars-js/starwars/
 
 ## `starwars planet`
 
-Describe the command here
+Get planets information
 
 ```
 USAGE
   $ starwars planet
 
 OPTIONS
-  -n, --name=name  name to print
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --id=id            Search for an ID
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
 
 DESCRIPTION
   ...
@@ -130,14 +158,21 @@ _See code: [src/commands/planet.js](https://github.com/CLI-Starwars-js/starwars/
 
 ## `starwars specie`
 
-Describe the command here
+Get species information
 
 ```
 USAGE
   $ starwars specie
 
 OPTIONS
-  -n, --name=name  name to print
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --id=id            Search for an ID
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
 
 DESCRIPTION
   ...
@@ -148,14 +183,21 @@ _See code: [src/commands/specie.js](https://github.com/CLI-Starwars-js/starwars/
 
 ## `starwars starship`
 
-Describe the command here
+Get starships information
 
 ```
 USAGE
   $ starwars starship
 
 OPTIONS
-  -n, --name=name  name to print
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --id=id            Search for an ID
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
 
 DESCRIPTION
   ...

@@ -1,7 +1,7 @@
 const {Command, flags} = require('@oclif/command')
 const { cli } = require('cli-ux')
 
-const { getAxios } = require('../utils')
+const { getById, getAll } = require('../utils')
 const People = require('../models/People')
 
 class PeopleCommand extends Command {
@@ -9,47 +9,11 @@ class PeopleCommand extends Command {
     const { flags } = this.parse(PeopleCommand)
     , id = flags.id
 
-    let data = null
-    , command = true
-    , next = 'http://swapi.co/api/people'
-    , results = []
-
     if (id) {
-      cli.action.start('Loading...')
-      data = await getAxios(next + `/${id}`)
-      cli.action.stop('Done') 
-
-      cli.table([data], People, {
-        printLine: this.log,
-        ...flags
-      })
-
-      return 
+      return getById('people', People, id)
     }
     
-
-    while (next && command) {
-      cli.action.start('Loading...')
-
-      data = await getAxios(next)
-      results = data['results']
-      next = data.next
-
-      cli.action.stop('Done') 
-      
-      cli.table(results, People, {
-        printLine: this.log,
-        ...flags
-      })
-
-      if (next && results.length >= 10)
-        command = await cli.confirm('Next page? (y/n)')
-        else 
-        next = null
-        
-      if (!command)
-        command = false
-    }
+    return getAll('people', People)
   }
 }
 
