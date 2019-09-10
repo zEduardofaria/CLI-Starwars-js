@@ -46,6 +46,8 @@ const getAllWithPagination = async (url, model) => {
     if (!command)
       command = false
   }
+
+  return results
 }
 
 const getAll = async (url) => {

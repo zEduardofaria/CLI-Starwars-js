@@ -53,7 +53,11 @@ class PilotCommand extends Command {
         printLine: this.log,
         ...flags
       })
+    
+    
+    return pilots
   }
+
 }
 
 PilotCommand.description = `Search for the best pilots of the galaxy!
