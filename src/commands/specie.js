@@ -8,12 +8,13 @@ class SpecieCommand extends Command {
   async run() {
     const { flags } = this.parse(SpecieCommand)
     , id = flags.id
+    , test = flags.test
 
     if (id) {
-      return getById('species', Species, id) 
+      return getById('species', Species, id)
     }
 
-    return getAllWithPagination('species', Species)
+    return getAllWithPagination('species', Species, test)
   }
 }
 
@@ -24,6 +25,7 @@ You can search for all Species in the API, or search for a single one by the ID
 
 SpecieCommand.flags = {
   id: flags.string({ description: 'Search for an ID' }),
+  test: flags.boolean({char: 't', description: 'Indicates that its a mocha call'}),
   ...cli.table.flags()
 }
 

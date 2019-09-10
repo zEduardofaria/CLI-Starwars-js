@@ -21,7 +21,7 @@ class PilotCommand extends Command {
       ]
     }
     , fuse = new Fuse(vehicles, options);
-    
+
     let searchResult
     , nextPerson
     , bestVehicle
@@ -39,8 +39,8 @@ class PilotCommand extends Command {
 
         }
 
-        pilots.push({ 
-          pilot: nextPerson.name, 
+        pilots.push({
+          pilot: nextPerson.name,
           vehicle: bestVehicle.name,
           max_atmosphering_speed: bestVehicle.max_atmosphering_speed
         })
@@ -53,8 +53,8 @@ class PilotCommand extends Command {
         printLine: this.log,
         ...flags
       })
-    
-    
+
+
     return pilots
   }
 
@@ -67,6 +67,7 @@ This command brings pilot's vehicle information, including name and max atmosphe
 
 PilotCommand.flags = {
   name: flags.string({char: 'n', description: 'name to print'}),
+  test: flags.boolean({char: 't', description: 'Indicates that its a mocha call'}),
 }
 
 PilotCommand.examples = [

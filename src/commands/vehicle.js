@@ -8,13 +8,14 @@ class VehicleCommand extends Command {
   async run() {
     const { flags } = this.parse(VehicleCommand)
     , id = flags.id
+    , test = flags.test
 
     if (id) {
       return getById('vehicles', Vehicles, id)
     }
-    
 
-    return getAllWithPagination('vehicles', Vehicles)
+
+    return getAllWithPagination('vehicles', Vehicles, test)
   }
 }
 
@@ -25,6 +26,7 @@ You can search for all vehicles in the API, or search for a single one by the ID
 
 VehicleCommand.flags = {
   id: flags.string({ description: 'Search for an ID' }),
+  test: flags.boolean({char: 't', description: 'Indicates that its a mocha call'}),
   ...cli.table.flags()
 }
 

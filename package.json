@@ -52,7 +52,7 @@
     "posttest": "eslint .",
     "readme": "oclif-dev readme --multi",
     "prepack": "oclif-dev manifest && oclif-dev readme",
-    "test": "node ./node_modules/mocha/bin/mocha --timeout 300000",
+    "test": "mocha --test",
     "version": "oclif-dev readme && git add README.md",
     "starwars": "./bin/run"
   }

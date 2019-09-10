@@ -8,12 +8,13 @@ class PeopleCommand extends Command {
   async run() {
     const { flags } = this.parse(PeopleCommand)
     , id = flags.id
+    , test = flags.test
 
     if (id) {
       return getById('people', People, id)
     }
-    
-    return getAllWithPagination('people', People)
+
+    return getAllWithPagination('people', People, test)
   }
 }
 
@@ -24,6 +25,7 @@ You can search for all People in the API, or search for a single one by the ID
 
 PeopleCommand.flags = {
   id: flags.string({ description: 'Search for an ID' }),
+  test: flags.boolean({char: 't', description: 'Indicates that its a mocha call'}),
   ...cli.table.flags()
 }
 

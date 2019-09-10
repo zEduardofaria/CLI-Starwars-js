@@ -4,8 +4,10 @@ class HelloCommand extends Command {
   async run() {
     const { flags } = this.parse(HelloCommand)
     const name = flags.name || 'world'
-    
+
     this.log(`Hello ${name}!`)
+
+    return `Hello ${name}!`
   }
 }
 
@@ -18,10 +20,11 @@ $ starwars hello --name=Eduardo
 `
 
 HelloCommand.flags = {
-  name: flags.string({ 
-    char: 'n', 
-    description: 'Name to say hello' 
+  name: flags.string({
+    char: 'n',
+    description: 'Name to say hello'
   }),
+  test: flags.boolean({char: 't', description: 'Indicates that its a mocha call'}),
 }
 
 module.exports = HelloCommand

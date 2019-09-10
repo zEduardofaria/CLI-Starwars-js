@@ -8,12 +8,13 @@ class PlanetCommand extends Command {
   async run() {
     const { flags } = this.parse(PlanetCommand)
     , id = flags.id
+    , test = flags.test
 
     if (id) {
-      return getById('planets', Planets, id)  
+      return getById('planets', Planets, id)
     }
-    
-    return getAllWithPagination('planets', Planets)
+
+    return getAllWithPagination('planets', Planets, test)
   }
 }
 
@@ -24,6 +25,7 @@ You can search for all Planets in the API, or search for a single one by the ID
 
 PlanetCommand.flags = {
   id: flags.string({ description: 'Search for an ID' }),
+  test: flags.boolean({char: 't', description: 'Indicates that its a mocha call'}),
   ...cli.table.flags()
 }
 

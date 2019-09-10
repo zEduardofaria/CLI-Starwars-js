@@ -10,7 +10,7 @@ const getById = async (url, model, id) => {
 
   data = await getAxios(`http://swapi.co/api/${url}/${id}`)
 
-  cli.action.stop('Done') 
+  cli.action.stop('Done')
 
   cli.table([data], model, {
     printLine: this.log,
@@ -18,7 +18,7 @@ const getById = async (url, model, id) => {
   })
 }
 
-const getAllWithPagination = async (url, model) => {
+const getAllWithPagination = async (url, model, test) => {
   let data = null
   , command = true
   , next = `http://swapi.co/api/${url}`
@@ -31,18 +31,18 @@ const getAllWithPagination = async (url, model) => {
     results = data['results']
     next = data.next
 
-    cli.action.stop('Done') 
-    
+    cli.action.stop('Done')
+
     cli.table(results, model, {
       printLine: this.log,
       ...flags
     })
 
-    if (next && results.length >= 10)
+    if (next && results.length >= 10 && !test)
       command = await cli.confirm('Next page? (y/n)')
-      else 
+      else
       next = null
-      
+
     if (!command)
       command = false
   }
@@ -54,7 +54,7 @@ const getAll = async (url) => {
   let next = `http://swapi.co/api/${url}`
   , results = []
 
-  while (next) {  
+  while (next) {
     data = await getAxios(next)
     results = results.concat(data['results'])
     next = data.next

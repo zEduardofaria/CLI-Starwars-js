@@ -4,56 +4,56 @@ const columns = {
       minWidth: 7,
     },
     MGLT: {
-        minWidth: 7,
+      minWidth: 7,
     },
     model: {
-        minWidth: 7,
+      minWidth: 7,
     },
     passengers: {
-        minWidth: 7,
-    },    
+      minWidth: 7,
+    },
     consumables: {
-        minWidth: 7,
-        extended: true
-    },    
+      minWidth: 7,
+      extended: true
+    },
     cost_in_credits: {
-        minWidth: 7,
-    },    
+      minWidth: 7,
+    },
     crew: {
-        minWidth: 7,
-    },    
+      minWidth: 7,
+    },
     hyperdrive_rating: {
-        minWidth: 7,
-    },    
+      minWidth: 7,
+    },
     manufacturer: {
-        minWidth: 7,
+      minWidth: 7,
     },
     max_atmosphering_speed: {
-        minWidth: 7,
+      minWidth: 7,
     },
     cargo_capacity: {
-        extended: true
-    },        
+      extended: true
+    },
     created: {
       extended: true
     },
     edited: {
-        extended: true
+      extended: true
     },
     length: {
-        extended: true
+      extended: true
     },
     pilots: {
-        extended: true
+      extended: true
     },
     films: {
-        extended: true
+      extended: true
     },
     starship_class: {
-        extended: true
+      extended: true
     },
     url: {
-        extended: true
+      extended: true
     },
 }
 

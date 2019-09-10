@@ -8,12 +8,13 @@ class StarshipCommand extends Command {
   async run() {
     const { flags } = this.parse(StarshipCommand)
     , id = flags.id
+    , test = flags.test
 
     if (id) {
       return getById('starships', Starships, id)
     }
 
-    return getAllWithPagination('starships', Starships)
+    return getAllWithPagination('starships', Starships, test)
   }
 }
 
@@ -24,6 +25,7 @@ You can search for all Starships in the API, or search for a single one by the I
 
 StarshipCommand.flags = {
   id: flags.string({ description: 'Search for an ID' }),
+  test: flags.boolean({char: 't', description: 'Indicates that its a mocha call'}),
   ...cli.table.flags()
 }
 

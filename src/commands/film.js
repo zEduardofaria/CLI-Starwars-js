@@ -8,12 +8,13 @@ class FilmCommand extends Command {
   async run() {
     const { flags } = this.parse(FilmCommand)
     , id = flags.id
+    , test = flags.test
 
     if (id) {
       return getById('films', Films, id)
     }
-    
-    return getAllWithPagination('films', Films)
+
+    return getAllWithPagination('films', Films, test)
   }
 }
 
@@ -24,6 +25,7 @@ You can search for all Films in the API, or search for a single one by the ID
 
 FilmCommand.flags = {
   id: flags.string({ description: 'Search for an ID' }),
+  test: flags.boolean({char: 't', description: 'Indicates that its a mocha call'}),
   ...cli.table.flags()
 }
 
