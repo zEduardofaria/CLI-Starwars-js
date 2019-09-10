@@ -15,11 +15,18 @@ This is a cool CLI for Smarttbot
 # Usage
 <!-- usage -->
 ```sh-session
+$ git clone https://github.com/zEduardofaria/CLI-Starwars-js.git
+
+$ cd CLI-Starwars-js
+
 $ npm install
+
 $ starwars COMMAND
 running command...
+
 $ starwars (-v|--version|version)
 starwars/0.0.0 linux-x64 node-v10.15.0
+
 $ starwars --help [COMMAND]
 USAGE
   $ starwars COMMAND
@@ -144,7 +151,14 @@ USAGE
   $ starwars pilot
 
 OPTIONS
-  -n, --name=name  name to print
+  -x, --extended     show extra columns
+  --columns=columns  only show provided columns (comma-separated)
+  --csv              output is csv format
+  --filter=filter    filter property by partial string matching, ex: name=foo
+  --id=id            Search for an ID
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --sort=sort        property to sort by (prepend '-' for descending)
 
 DESCRIPTION
   ...

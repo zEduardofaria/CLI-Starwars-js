@@ -3,6 +3,7 @@ const Fuse = require('fuse.js')
 const { cli } = require('cli-ux')
 
 const { getAll } = require('../utils')
+const Pilots = require('../models/Pilots')
 
 class PilotCommand extends Command {
   async run() {
@@ -48,17 +49,7 @@ class PilotCommand extends Command {
 
     cli.action.stop('Done')
 
-    cli.table(pilots, { 
-        pilot: {
-          minWidth: 7
-        },
-        vehicle: {
-          minWidth: 7
-        },
-        max_atmosphering_speed: {
-          minWidth: 7
-        }  
-      }, {
+    cli.table(pilots, Pilots, {
         printLine: this.log,
         ...flags
       })
@@ -74,7 +65,7 @@ PilotCommand.flags = {
   name: flags.string({char: 'n', description: 'name to print'}),
 }
 
-VehicleCommand.examples = [
+PilotCommand.examples = [
   '$ starwars pilot',
 ]
 
