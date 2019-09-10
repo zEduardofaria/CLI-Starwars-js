@@ -6,7 +6,7 @@ const { cli } = require('cli-ux')
 const getAxios = (url) => axios.get(url).then(({ data }) => data)
 
 const getById = async (url, model, id) => {
-  cli.action.start('Loading...')
+  cli.action.start('Waiting for swapi...')
 
   data = await getAxios(`http://swapi.co/api/${url}/${id}`)
 
@@ -25,7 +25,7 @@ const getAllWithPagination = async (url, model) => {
   , results = []
 
   while (next && command) {
-    cli.action.start('Loading...')
+    cli.action.start('Waiting for swapi...')
 
     data = await getAxios(next)
     results = data['results']

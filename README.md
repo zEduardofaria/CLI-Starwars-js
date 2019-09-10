@@ -137,7 +137,7 @@ _See code: [src/commands/people.js](https://github.com/CLI-Starwars-js/starwars/
 
 ## `starwars pilot`
 
-Describe the command here
+Search for the best pilots of the galaxy!
 
 ```
 USAGE
@@ -148,7 +148,7 @@ OPTIONS
 
 DESCRIPTION
   ...
-  Extra documentation goes here
+  This command brings pilot's vehicle information, including name and max atmosphering speed
 ```
 
 _See code: [src/commands/pilot.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/pilot.js)_
