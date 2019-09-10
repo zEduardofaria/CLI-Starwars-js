@@ -4,9 +4,9 @@ starwars
 This is a cool CLI for Smarttbot
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/starwars.svg)](https://npmjs.org/package/starwars)
-[![Downloads/week](https://img.shields.io/npm/dw/starwars.svg)](https://npmjs.org/package/starwars)
-[![License](https://img.shields.io/npm/l/starwars.svg)](https://github.com/CLI-Starwars-js/starwars/blob/master/package.json)
+<!-- [![Version](https://img.shields.io/npm/v/starwars.svg)](https://npmjs.org/package/starwars) -->
+<!-- [![Downloads/week](https://img.shields.io/npm/dw/starwars.svg)](https://npmjs.org/package/starwars) -->
+<!-- [![License](https://img.shields.io/npm/l/starwars.svg)](https://github.com/CLI-Starwars-js/starwars/blob/master/package.json) -->
 
 <!-- toc -->
 * [Usage](#usage)
