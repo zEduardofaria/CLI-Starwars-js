@@ -1,66 +1,68 @@
 
-const { flags } = require('@oclif/command')
-const axios = require('axios')
-const { cli } = require('cli-ux')
+const { flags } = require('@oclif/command');
+const axios = require('axios');
+const { cli } = require('cli-ux');
 
-const getAxios = (url) => axios.get(url).then(({ data }) => data)
+const getAxios = (url) => axios.get(url).then(({ data }) => data);
 
 const getById = async (url, model, id) => {
-  cli.action.start('Waiting for swapi...')
+  cli.action.start('Waiting for swapi...');
 
-  data = await getAxios(`http://swapi.co/api/${url}/${id}`)
+  const data = await getAxios(`http://swapi.co/api/${url}/${id}`);
 
-  cli.action.stop('Done')
+  cli.action.stop('Done');
 
   cli.table([data], model, {
     printLine: this.log,
-    ...flags
-  })
-}
+    ...flags,
+  });
+};
 
 const getAllWithPagination = async (url, model, test) => {
-  let data = null
-  , command = true
-  , next = `http://swapi.co/api/${url}`
-  , results = []
+  let data = null;
+  let command = true;
+  let next = `http://swapi.co/api/${url}`;
+  let results = [];
 
   while (next && command) {
-    cli.action.start('Waiting for swapi...')
+    cli.action.start('Waiting for swapi...');
 
-    data = await getAxios(next)
-    results = data['results']
-    next = data.next
+    data = await getAxios(next);
+    results = data.results;
+    next = data.next;
 
-    cli.action.stop('Done')
+    cli.action.stop('Done');
 
     cli.table(results, model, {
       printLine: this.log,
-      ...flags
-    })
+      ...flags,
+    });
 
-    if (next && results.length >= 10 && !test)
-      command = await cli.confirm('Next page? (y/n)')
-      else
-      next = null
+    if (next && results.length >= 10 && !test) {
+      command = await cli.confirm('Next page? (y/n)');
+    } else {
+      next = null;
+    }
 
-    if (!command)
-      command = false
+    if (!command) { command = false; }
   }
 
-  return results
-}
+  return results;
+};
 
 const getAll = async (url) => {
-  let next = `http://swapi.co/api/${url}`
-  , results = []
+  let next = `http://swapi.co/api/${url}`;
+  let results = [];
 
   while (next) {
-    data = await getAxios(next)
-    results = results.concat(data['results'])
-    next = data.next
+    const data = await getAxios(next);
+    results = results.concat(data.results);
+    next = data.next;
   }
 
-  return results
-}
+  return results;
+};
 
-module.exports = { getAxios, getById, getAllWithPagination, getAll }
+module.exports = {
+  getAxios, getById, getAllWithPagination, getAll,
+};
