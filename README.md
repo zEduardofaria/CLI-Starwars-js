@@ -65,6 +65,8 @@ EXAMPLES
   $ starwars --filter="title=New"
 ```
 
+_See code: [src/commands/film.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.2/src/commands/film.js)_
+
 ## `starwars hello`
 
 Say hello for someone, or for everyone!
@@ -84,6 +86,8 @@ DESCRIPTION
   $ starwars hello --name=Eduardo
 ```
 
+_See code: [src/commands/hello.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.2/src/commands/hello.js)_
+
 ## `starwars help [COMMAND]`
 
 display help for starwars
@@ -98,6 +102,8 @@ ARGUMENTS
 OPTIONS
   --all  see all commands in CLI
 ```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
 
 ## `starwars people`
 
@@ -128,6 +134,8 @@ EXAMPLES
   $ starwars --filter="name=Luke"
 ```
 
+_See code: [src/commands/people.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.2/src/commands/people.js)_
+
 ## `starwars pilot`
 
 Search for the best pilots of the galaxy!
@@ -147,6 +155,8 @@ DESCRIPTION
 EXAMPLE
   $ starwars pilot
 ```
+
+_See code: [src/commands/pilot.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.2/src/commands/pilot.js)_
 
 ## `starwars planet`
 
@@ -177,6 +187,8 @@ EXAMPLES
   $ starwars --filter="name=Sand"
 ```
 
+_See code: [src/commands/planet.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.2/src/commands/planet.js)_
+
 ## `starwars specie`
 
 Get Species information
@@ -205,6 +217,8 @@ EXAMPLES
   $ starwars specie --id="3"
   $ starwars --filter="name=Wookie"
 ```
+
+_See code: [src/commands/specie.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.2/src/commands/specie.js)_
 
 ## `starwars starship`
 
@@ -235,6 +249,8 @@ EXAMPLES
   $ starwars --filter="name=Death"
 ```
 
+_See code: [src/commands/starship.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.2/src/commands/starship.js)_
+
 ## `starwars vehicle`
 
 Get vehicles information
@@ -263,4 +279,6 @@ EXAMPLES
   $ starwars vehicle --id="4"
   $ starwars --filter="name=Sand"
 ```
+
+_See code: [src/commands/vehicle.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.2/src/commands/vehicle.js)_
 <!-- commandsstop -->
