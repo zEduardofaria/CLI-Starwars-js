@@ -6,7 +6,7 @@
   "bin": {
     "starwars": "./bin/run"
   },
-  "bugs": "https://github.com/CLI-Starwars-js/starwars/issues",
+  "bugs": "https://github.com/zEduardofaria/CLI-Starwars-js/issues",
   "dependencies": {
     "@oclif/command": "^1.5.19",
     "@oclif/config": "^1.13.3",
