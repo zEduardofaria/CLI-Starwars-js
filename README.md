@@ -4,9 +4,7 @@ starwars-smarttbot
 This is a cool CLI app for [Smarttbot's](https://smarttbot.com/) job application
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-<!-- [![Version](https://img.shields.io/npm/v/starwars.svg)](https://npmjs.org/package/starwars) -->
-<!-- [![Downloads/week](https://img.shields.io/npm/dw/starwars.svg)](https://npmjs.org/package/starwars) -->
-<!-- [![License](https://img.shields.io/npm/l/starwars.svg)](https://github.com/CLI-Starwars-js/starwars/blob/master/package.json) -->
+[![Version](https://img.shields.io/npm/v/starwars-smarttbot.svg)](https://npmjs.org/package/starwars-smarttbot)
 
 <!-- toc -->
 * [Usage](#usage)
