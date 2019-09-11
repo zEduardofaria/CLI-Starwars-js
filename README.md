@@ -15,18 +15,11 @@ This is a cool CLI app for [Smarttbot's](https://smarttbot.com/) job application
 # Usage
 <!-- usage -->
 ```sh-session
-$ git clone https://github.com/zEduardofaria/CLI-Starwars-js.git
-
-$ cd CLI-Starwars-js
-
-$ npm install
-
+$ npm install -g starwars-smarttbot
 $ starwars COMMAND
 running command...
-
 $ starwars (-v|--version|version)
-starwars/0.0.0 linux-x64 node-v10.15.0
-
+starwars-smarttbot/1.0.1 linux-x64 node-v10.15.0
 $ starwars --help [COMMAND]
 USAGE
   $ starwars COMMAND
@@ -54,6 +47,7 @@ USAGE
   $ starwars film
 
 OPTIONS
+  -t, --test         Indicates that its a mocha call
   -x, --extended     show extra columns
   --columns=columns  only show provided columns (comma-separated)
   --csv              output is csv format
@@ -73,7 +67,7 @@ EXAMPLES
   $ starwars --filter="title=New"
 ```
 
-_See code: [src/commands/film.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/film.js)_
+_See code: [src/commands/film.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.1/src/commands/film.js)_
 
 ## `starwars hello`
 
@@ -85,6 +79,7 @@ USAGE
 
 OPTIONS
   -n, --name=name  Name to say hello
+  -t, --test       Indicates that its a mocha call
 
 DESCRIPTION
   If you want to say hello for someone, try something like this two examples:
@@ -93,7 +88,7 @@ DESCRIPTION
   $ starwars hello --name=Eduardo
 ```
 
-_See code: [src/commands/hello.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.1/src/commands/hello.js)_
 
 ## `starwars help [COMMAND]`
 
@@ -121,6 +116,7 @@ USAGE
   $ starwars people
 
 OPTIONS
+  -t, --test         Indicates that its a mocha call
   -x, --extended     show extra columns
   --columns=columns  only show provided columns (comma-separated)
   --csv              output is csv format
@@ -140,7 +136,7 @@ EXAMPLES
   $ starwars --filter="name=Luke"
 ```
 
-_See code: [src/commands/people.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/people.js)_
+_See code: [src/commands/people.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.1/src/commands/people.js)_
 
 ## `starwars pilot`
 
@@ -151,21 +147,18 @@ USAGE
   $ starwars pilot
 
 OPTIONS
-  -x, --extended     show extra columns
-  --columns=columns  only show provided columns (comma-separated)
-  --csv              output is csv format
-  --filter=filter    filter property by partial string matching, ex: name=foo
-  --id=id            Search for an ID
-  --no-header        hide table header from output
-  --no-truncate      do not truncate output to fit screen
-  --sort=sort        property to sort by (prepend '-' for descending)
+  -n, --name=name  name to print
+  -t, --test       Indicates that its a mocha call
 
 DESCRIPTION
   ...
   This command brings pilot's vehicle information, including name and max atmosphering speed
+
+EXAMPLE
+  $ starwars pilot
 ```
 
-_See code: [src/commands/pilot.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/pilot.js)_
+_See code: [src/commands/pilot.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.1/src/commands/pilot.js)_
 
 ## `starwars planet`
 
@@ -176,6 +169,7 @@ USAGE
   $ starwars planet
 
 OPTIONS
+  -t, --test         Indicates that its a mocha call
   -x, --extended     show extra columns
   --columns=columns  only show provided columns (comma-separated)
   --csv              output is csv format
@@ -195,7 +189,7 @@ EXAMPLES
   $ starwars --filter="name=Sand"
 ```
 
-_See code: [src/commands/planet.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/planet.js)_
+_See code: [src/commands/planet.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.1/src/commands/planet.js)_
 
 ## `starwars specie`
 
@@ -206,6 +200,7 @@ USAGE
   $ starwars specie
 
 OPTIONS
+  -t, --test         Indicates that its a mocha call
   -x, --extended     show extra columns
   --columns=columns  only show provided columns (comma-separated)
   --csv              output is csv format
@@ -225,7 +220,7 @@ EXAMPLES
   $ starwars --filter="name=Wookie"
 ```
 
-_See code: [src/commands/specie.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/specie.js)_
+_See code: [src/commands/specie.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.1/src/commands/specie.js)_
 
 ## `starwars starship`
 
@@ -236,6 +231,7 @@ USAGE
   $ starwars starship
 
 OPTIONS
+  -t, --test         Indicates that its a mocha call
   -x, --extended     show extra columns
   --columns=columns  only show provided columns (comma-separated)
   --csv              output is csv format
@@ -255,7 +251,7 @@ EXAMPLES
   $ starwars --filter="name=Death"
 ```
 
-_See code: [src/commands/starship.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/starship.js)_
+_See code: [src/commands/starship.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.1/src/commands/starship.js)_
 
 ## `starwars vehicle`
 
@@ -266,6 +262,7 @@ USAGE
   $ starwars vehicle
 
 OPTIONS
+  -t, --test         Indicates that its a mocha call
   -x, --extended     show extra columns
   --columns=columns  only show provided columns (comma-separated)
   --csv              output is csv format
@@ -285,5 +282,5 @@ EXAMPLES
   $ starwars --filter="name=Sand"
 ```
 
-_See code: [src/commands/vehicle.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/vehicle.js)_
+_See code: [src/commands/vehicle.js](https://github.com/CLI-Starwars-js/starwars/blob/v1.0.1/src/commands/vehicle.js)_
 <!-- commandsstop -->
