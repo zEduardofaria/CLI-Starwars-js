@@ -1,7 +1,7 @@
 {
   "name": "starwars-smarttbot",
   "description": "This is a cool CLI for Smarttbot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Eduardo Faria",
   "bin": {
     "starwars": "./bin/run"
@@ -35,7 +35,7 @@
     "/oclif.manifest.json",
     "/src"
   ],
-  "homepage": "https://github.com/CLI-Starwars-js/starwars",
+  "homepage": "https://github.com/zEduardofaria/CLI-Starwars-js",
   "keywords": [
     "oclif"
   ],
@@ -48,7 +48,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "CLI-Starwars-js",
+  "repository": "zEduardofaria/CLI-Starwars-js",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
