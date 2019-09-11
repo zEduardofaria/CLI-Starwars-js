@@ -48,7 +48,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "CLI-Starwars-js/starwars",
+  "repository": "CLI-Starwars-js",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
