@@ -1,7 +1,7 @@
 {
   "name": "starwars-smarttbot",
   "description": "This is a cool CLI for Smarttbot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Eduardo Faria",
   "bin": {
     "starwars": "./bin/run"
