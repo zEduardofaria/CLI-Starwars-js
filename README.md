@@ -1,7 +1,7 @@
-starwars
+starwars-smarttbot
 ========
 
-This is a cool CLI for Smarttbot
+This is a cool CLI app for [`Smarttbot's`](https://smarttbot.com/) job application
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 <!-- [![Version](https://img.shields.io/npm/v/starwars.svg)](https://npmjs.org/package/starwars) -->
