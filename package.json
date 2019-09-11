@@ -1,7 +1,7 @@
 {
   "name": "starwars-smarttbot",
   "description": "This is a cool CLI for Smarttbot",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Eduardo Faria",
   "bin": {
     "starwars": "./bin/run"
@@ -53,6 +53,7 @@
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
     "readme": "oclif-dev readme --multi",
+    "prepack": "oclif-dev manifest",
     "test": "mocha --test",
     "version": "oclif-dev readme && git add README.md",
     "starwars": "./bin/run"
