@@ -3,11 +3,11 @@ const { Command, flags } = require('@oclif/command');
 class HelloCommand extends Command {
   async run() {
     const { flags } = this.parse(HelloCommand);
-    const { name } = flags || 'world';
+    const { name } = flags;
 
-    this.log(`Hello ${name}!`);
+    this.log(`Hello ${name || 'world'}!`);
 
-    return `Hello ${name}!`;
+    return `Hello ${name || 'world'}!`;
   }
 }
 
