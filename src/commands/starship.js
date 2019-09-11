@@ -6,8 +6,8 @@ const Starships = require('../models/Starships');
 
 class StarshipCommand extends Command {
   async run() {
-    const { flag } = this.parse(StarshipCommand);
-    const { id, test } = flag;
+    const { flags } = this.parse(StarshipCommand);
+    const { id, test } = flags;
 
     if (id) {
       return getById('starships', Starships, id);

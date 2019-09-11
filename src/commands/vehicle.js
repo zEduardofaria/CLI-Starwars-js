@@ -6,8 +6,8 @@ const Vehicles = require('../models/Vehicles');
 
 class VehicleCommand extends Command {
   async run() {
-    const { flag } = this.parse(VehicleCommand);
-    const { id, test } = flag;
+    const { flags } = this.parse(VehicleCommand);
+    const { id, test } = flags;
 
     if (id) {
       return getById('vehicles', Vehicles, id);

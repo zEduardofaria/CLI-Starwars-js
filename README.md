@@ -17,7 +17,7 @@ $ npm install -g starwars-smarttbot
 $ starwars COMMAND
 running command...
 $ starwars (-v|--version|version)
-starwars-smarttbot/1.0.5 linux-x64 node-v10.15.0
+starwars-smarttbot/1.0.7 linux-x64 node-v10.15.0
 $ starwars --help [COMMAND]
 USAGE
   $ starwars COMMAND

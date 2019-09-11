@@ -6,8 +6,8 @@ const Planets = require('../models/Planets');
 
 class PlanetCommand extends Command {
   async run() {
-    const { flag } = this.parse(PlanetCommand);
-    const { id, test } = flag;
+    const { flags } = this.parse(PlanetCommand);
+    const { id, test } = flags;
 
     if (id) {
       return getById('planets', Planets, id);

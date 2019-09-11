@@ -6,8 +6,8 @@ const People = require('../models/People');
 
 class PeopleCommand extends Command {
   async run() {
-    const { flag } = this.parse(PeopleCommand);
-    const { id, test } = flag;
+    const { flags } = this.parse(PeopleCommand);
+    const { id, test } = flags;
 
     if (id) {
       return getById('people', People, id);

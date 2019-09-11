@@ -6,8 +6,8 @@ const Species = require('../models/Species');
 
 class SpecieCommand extends Command {
   async run() {
-    const { flag } = this.parse(SpecieCommand);
-    const { id, test } = flag;
+    const { flags } = this.parse(SpecieCommand);
+    const { id, test } = flags;
 
     if (id) {
       return getById('species', Species, id);

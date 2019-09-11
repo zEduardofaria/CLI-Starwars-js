@@ -6,8 +6,8 @@ const Films = require('../models/Films');
 
 class FilmCommand extends Command {
   async run() {
-    const { flag } = this.parse(FilmCommand);
-    const { id, test } = flag;
+    const { flags } = this.parse(FilmCommand);
+    const { id, test } = flags;
 
     if (id) {
       return getById('films', Films, id);
