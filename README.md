@@ -73,7 +73,7 @@ EXAMPLES
   $ starwars --filter="title=New"
 ```
 
-_See code: [src/commands/film.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/film.js)_
+_See code: [src/commands/film.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/film.js)_
 
 ## `starwars hello`
 
@@ -93,7 +93,7 @@ DESCRIPTION
   $ starwars hello --name=Eduardo
 ```
 
-_See code: [src/commands/hello.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/hello.js)_
+_See code: [src/commands/hello.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/hello.js)_
 
 ## `starwars help [COMMAND]`
 
@@ -140,7 +140,7 @@ EXAMPLES
   $ starwars --filter="name=Luke"
 ```
 
-_See code: [src/commands/people.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/people.js)_
+_See code: [src/commands/people.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/people.js)_
 
 ## `starwars pilot`
 
@@ -165,7 +165,7 @@ DESCRIPTION
   This command brings pilot's vehicle information, including name and max atmosphering speed
 ```
 
-_See code: [src/commands/pilot.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/pilot.js)_
+_See code: [src/commands/pilot.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/pilot.js)_
 
 ## `starwars planet`
 
@@ -195,7 +195,7 @@ EXAMPLES
   $ starwars --filter="name=Sand"
 ```
 
-_See code: [src/commands/planet.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/planet.js)_
+_See code: [src/commands/planet.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/planet.js)_
 
 ## `starwars specie`
 
@@ -225,7 +225,7 @@ EXAMPLES
   $ starwars --filter="name=Wookie"
 ```
 
-_See code: [src/commands/specie.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/specie.js)_
+_See code: [src/commands/specie.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/specie.js)_
 
 ## `starwars starship`
 
@@ -255,7 +255,7 @@ EXAMPLES
   $ starwars --filter="name=Death"
 ```
 
-_See code: [src/commands/starship.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/starship.js)_
+_See code: [src/commands/starship.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/starship.js)_
 
 ## `starwars vehicle`
 
@@ -285,5 +285,5 @@ EXAMPLES
   $ starwars --filter="name=Sand"
 ```
 
-_See code: [src/commands/vehicle.js](https://github.com/CLI-Starwars-js/starwars/blob/v0.0.0/src/commands/vehicle.js)_
+_See code: [src/commands/vehicle.js](https://github.com/zEduardofaria/CLI-Starwars-js/tree/master/src/commands/vehicle.js)_
 <!-- commandsstop -->

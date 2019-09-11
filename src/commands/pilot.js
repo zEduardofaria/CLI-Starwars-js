@@ -34,7 +34,8 @@ class PilotCommand extends Command {
         for (const vehicle of people[personIndex].vehicles) {
           searchResult = fuse.search(vehicle);
 
-          if (!bestVehicle || searchResult[0].max_atmosphering_speed > bestVehicle.max_atmosphering_speed) {
+          if (!bestVehicle
+            || searchResult[0].max_atmosphering_speed > bestVehicle.max_atmosphering_speed) {
             bestVehicle = searchResult[0];
           }
         }
