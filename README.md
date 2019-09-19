@@ -23,6 +23,13 @@ USAGE
   $ starwars COMMAND
 ...
 ```
+# Running the tests
+<!-- usage -->
+```sh-session
+$ git clone https://github.com/zEduardofaria/CLI-Starwars-js.git
+$ cd CLI-Starwars-js
+$ npm test
+```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
